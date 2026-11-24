@@ -2,10 +2,18 @@ const express = require("express");
 const axios = require("axios");
 const qs = require("qs");
 const cheerio = require("cheerio");
+const cors = require("cors");
 const { CookieJar } = require("tough-cookie");
 const { wrapper } = require("axios-cookiejar-support");
 
 const app = express();
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
+}));
+
 app.use(express.json({ limit: "100kb" }));
 
 const BASE = "https://www.tabroom.com";

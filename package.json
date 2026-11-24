@@ -1,0 +1,19 @@
+
+{
+  "name": "tabroom-api",
+  "version": "1.0.0",
+  "description": "Tabroom data API for paradigms and tournament break rounds",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "axios-cookiejar-support": "^5.0.5",
+    "cheerio": "^1.0.0",
+    "express": "^4.21.2",
+    "qs": "^6.13.1",
+    "tough-cookie": "^4.1.4"
+  }
+}
